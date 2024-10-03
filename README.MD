@@ -17,7 +17,7 @@ O fluxo de uma rede neural é composto por diversas etapas. A seguir, são apres
 * **Inicialização dos Pesos**: os pesos da rede neural são inicializados de forma aleatória.
 * **Forward Propagation**: os dados de entrada são propagados pela rede neural.
 * **Cálculo do Erro**: o erro é calculado a partir da diferença entre a saída da rede neural e o valor esperado.
-* **Backward Propagation**: o erro é propagado pela rede neural, ajustando os pesos.
+* **Backward Propagation**: (Retro propagação ou backpropagation) o erro é propagado pela rede neural, ajustando os pesos.
 * **Atualização dos Pesos**: os pesos da rede neural são atualizados com base no erro calculado.
 * **Treinamento**: o processo de forward e backward propagation é repetido diversas vezes para ajustar os pesos da rede neural.
 * **Teste**: a rede neural é testada com novos dados para avaliar o seu desempenho.
@@ -34,7 +34,7 @@ O fluxo de uma rede neural é composto por diversas etapas. A seguir, são apres
 * **Redes Neurais Recorrentes (RNN):** redes neurais com conexões recorrentes, ideais para dados sequenciais.
 * **Redes Neurais Generativas Adversariais (GANs):** redes neurais compostas por um gerador e um discriminador que competem entre si.
 * **Forward Propagation:** propagação dos dados de entrada pela rede neural.
-* **Backward Propagation:** propagação do erro pela rede neural para ajustar os pesos.
+* **Backward Propagation:** (Retro propagação ou backpropagation) propagação do erro pela rede neural para ajustar os pesos.
 * **Treinamento de Redes Neurais:** processo de ajuste dos pesos da rede neural para aprender padrões nos dados.
 * **Processamento de Linguagem Natural (NLP):** área da inteligência artificial que se concentra no processamento de texto e linguagem humana.
 * **Visão Computacional:** área da inteligência artificial que se concentra no processamento de imagens e vídeos.
