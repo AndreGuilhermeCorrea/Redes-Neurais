@@ -1,26 +1,39 @@
 # Redes Neurais
 
-As redes neurais são um modelo computacional inspirado no sistema nervoso biológico. Elas são compostas por neurônios artificiais que são organizados em camadas e conectados por sinapses. Cada neurônio recebe um conjunto de entradas, realiza um cálculo e produz uma saída. A saída de um neurônio é a entrada de outro neurônio. A rede neural é treinada para aprender padrões e realizar tarefas específicas.
+As redes neurais são um modelo computacional inspirado no sistema nervoso biológico. Elas são compostas por neurônios artificiais que são organizados em camadas e conectados por sinapses(conexões entre neurônios). Esses neurônios realizam cálculos matemáticos para identificar padrões e fazer previsões com base em dados de entrada, ou seja, cada neurônio recebe um conjunto de entradas, realiza um cálculo e produz uma saída. A saída de um neurônio é a entrada de outro neurônio. A rede neural é treinada para aprender padrões e realizar tarefas específicas.
 
 ## Aplicações das Redes Neurais
 
-As redes neurais têm diversas aplicações em áreas como visão computacional, processamento de linguagem natural, reconhecimento de padrões, entre outras. Alguns exemplos de aplicações de redes neurais são:
-* **Reconhecimento de Imagens**: as CNNs são amplamente utilizadas em tarefas de reconhecimento de imagens, como classificação de objetos e detecção de padrões.
-* **Processamento de Linguagem Natural**: as RNNs são utilizadas em tarefas de processamento de linguagem natural, como tradução automática e geração de texto.
-* **Recomendação de Conteúdo**: as redes neurais são utilizadas em sistemas de recomendação para prever preferências do usuário e recomendar conteúdo personalizado.
-* **Medicina**: as redes neurais são utilizadas em aplicações médicas, como diagnóstico de doenças e análise de imagens médicas.
+As redes neurais têm aplicações em diversas áreas, pois são capazes de aprender padrões a partir de grandes volumes de dados.
+
+* **Visão Computacional:** Utilizando Redes Neurais Convolucionais (CNNs), as redes neurais são usadas para reconhecimento de imagens, classificação de objetos, detecção de rostos e diagnóstico médico com base em imagens radiológicas. **Como:** Classificação de imagens de gatos e cães, detecção de tumores em imagens de ressonância magnética.
+
+* **Processamento de Linguagem Natural (NLP):** Redes como as Redes Neurais Recorrentes (RNNs) e Transformers são usadas para tradução automática, geração de texto, chatbots, análise de sentimentos e muito mais. **Como:** Google Translate, assistentes virtuais como Alexa e Siri, análise de sentimentos de comentários em redes sociais.
+
+* **Sistemas de Recomendação:** Redes neurais são usadas para prever preferências dos usuários, recomendando filmes, músicas, produtos, ou notícias com base no comportamento anterior do usuário. **Como:**  Sistemas de recomendação da Netflix, Amazon e YouTube.
+
+* **Medicina:** Redes neurais são aplicadas em diagnóstico médico, descoberta de medicamentos e análise preditiva de doenças. **Como:** Diagnóstico de câncer, identificação de doenças raras, previsão de evolução de doenças com base em histórico médico.
+
+* **Jogos e Inteligência Artificial:** Redes neurais são usadas para criar agentes que jogam jogos complexos, como o Go e o xadrez, vencendo até mesmo jogadores humanos profissionais. **Como:** AlphaGo, da DeepMind, e agentes de IA que jogam StarCraft.
 
 ## Fluxo das Redes Neurais
 
-O fluxo de uma rede neural é composto por diversas etapas. A seguir, são apresentadas as principais etapas:
+O fluxo de uma rede neural é composto por diversas etapas. 
 
 * **Inicialização dos Pesos**: os pesos da rede neural são inicializados de forma aleatória.
 * **Forward Propagation**: os dados de entrada são propagados pela rede neural.
 * **Cálculo do Erro**: o erro é calculado a partir da diferença entre a saída da rede neural e o valor esperado.
 * **Backward Propagation**: (Retro propagação ou backpropagation) o erro é propagado pela rede neural, ajustando os pesos.
 * **Atualização dos Pesos**: os pesos da rede neural são atualizados com base no erro calculado.
-* **Treinamento**: o processo de forward e backward propagation é repetido diversas vezes para ajustar os pesos da rede neural.
-* **Teste**: a rede neural é testada com novos dados para avaliar o seu desempenho.
+* **Iteração**: o processo de treinamento, teste e predição é repetido até que a rede neural atinja a precisão desejada.
+
+## Funções de Ativação
+
+As funções de ativação são essenciais para determinar a saída de um neurônio. Elas introduzem não linearidades nos cálculos da rede, permitindo que as redes neurais aprendam padrões complexos.
+
+* **ReLU (Rectified Linear Unit):** Mapeia valores negativos para zero e mantém os valores positivos. É amplamente utilizada em redes neurais profundas.
+* **Sigmoide:** Transforma as entradas em valores entre 0 e 1. É usada principalmente para classificações binárias.
+* **Tanh:** Mapeia valores para o intervalo entre -1 e 1, sendo útil em problemas que envolvem sinais de entrada positivos e negativos.
 
 ## Palavras-Chave
 
@@ -34,7 +47,7 @@ O fluxo de uma rede neural é composto por diversas etapas. A seguir, são apres
 * **Redes Neurais Recorrentes (RNN):** redes neurais com conexões recorrentes, ideais para dados sequenciais.
 * **Redes Neurais Generativas Adversariais (GANs):** redes neurais compostas por um gerador e um discriminador que competem entre si.
 * **Forward Propagation:** propagação dos dados de entrada pela rede neural.
-* **Backward Propagation:** (Retro propagação ou backpropagation) propagação do erro pela rede neural para ajustar os pesos.
+* **Backward Propagation:** propagação do erro pela rede neural para ajustar os pesos.
 * **Treinamento de Redes Neurais:** processo de ajuste dos pesos da rede neural para aprender padrões nos dados.
 * **Processamento de Linguagem Natural (NLP):** área da inteligência artificial que se concentra no processamento de texto e linguagem humana.
 * **Visão Computacional:** área da inteligência artificial que se concentra no processamento de imagens e vídeos.
@@ -42,193 +55,74 @@ O fluxo de uma rede neural é composto por diversas etapas. A seguir, são apres
 * **Sigmoide:** função de ativação que mapeia valores reais para o intervalo [0, 1].
 * **Neuronio:** unidade básica de processamento em uma rede neural, que recebe entradas, aplica pesos e produz uma saída.
 * **Função de Ativação:** função matemática que determina a saída de um neurônio com base em suas entradas.
+* **Mean Squared Error (MSE):** métrica de erro que calcula a média dos quadrados das diferenças entre a saída da rede e o valor esperado.
+* **Root Mean Squared Error (RMSE):** métrica de erro que calcula a raiz quadrada da média dos quadrados das diferenças entre a saída da rede e o valor esperado.
+* **Backpropagation:** algoritmo de treinamento de redes neurais que ajusta os pesos com base no erro calculado.
+* **Gradient Descent:** algoritmo de otimização que ajusta os pesos da rede neural para minimizar o erro.
+* **Overfitting:** problema em que a rede neural se ajusta demais aos dados de treinamento e não generaliza bem para novos dados.
+* **Underfitting:** problema em que a rede neural não se ajusta adequadamente aos dados de treinamento e não consegue aprender padrões.
+* **Regularização:** técnica utilizada para evitar overfitting, adicionando termos de penalização aos pesos da rede neural.
 
 ## Tipos de Redes Neurais
 
-Existem diversos tipos de redes neurais, cada uma com características e aplicações específicas. Alguns dos tipos mais comuns de redes neurais são:
+Existem diversos tipos de redes neurais, cada uma com características e aplicações específicas. 
+
 * **Perceptron**: o perceptron é o modelo mais simples de rede neural, composto por um único neurônio artificial.
 * **Multilayer Perceptron (MLP)**: o MLP é uma rede neural feedforward composta por múltiplas camadas de neurônios.
 * **Redes Neurais Convolucionais (CNN)**: as CNNs são redes neurais especializadas em processamento de imagens, que utilizam camadas convolucionais para extrair características.
 * **Redes Neurais Recorrentes (RNN)**: as RNNs são redes neurais que possuem conexões recorrentes, permitindo que informações sejam propagadas ao longo do tempo.
 * **Redes Neurais Generativas Adversariais (GANs)**: as GANs são redes neurais compostas por um gerador e um discriminador, que são treinados de forma adversarial para gerar dados realistas.
 
-## Perceptron
+## 1. Perceptron Simples
 
-O perceptron é o modelo mais simples de rede neural. Ele consiste em um único neurônio artificial que realiza uma classificação binária. O perceptron recebe um conjunto de entradas, aplica pesos a essas entradas, calcula uma soma ponderada e passa essa soma por uma função de ativação para produzir uma saída. A função de ativação mais comum para o perceptron é a função degrau, que produz uma saída de 1 se a soma ponderada for maior que um determinado limiar, e 0 caso contrário.
-    
-### Funcionamento do Perceptron
-    
-1. **Inicialização dos Pesos**: os pesos são inicializados de forma aleatória.
-2. **Cálculo da Soma Ponderada**: a soma ponderada das entradas é calculada.
-3. **Aplicação da Função de Ativação**: a soma ponderada é passada pela função de ativação para produzir a saída.
-4. **Cálculo do Erro**: o erro é calculado como a diferença entre a saída desejada e a saída produzida.
-5. **Atualização dos Pesos**: os pesos são ajustados com base no erro calculado.
-6. **Iteração**: o processo é repetido para várias amostras de treinamento até que os pesos se ajustem adequadamente.
-    
-### Aplicações do Perceptron
-    
-O perceptron pode ser utilizado em problemas de classificação linearmente separáveis, como a classificação de dados em duas categorias distintas. No entanto, ele tem limitações em problemas mais complexos que não são linearmente separáveis.
+O Perceptron é o modelo mais básico de rede neural, composto por um único neurônio. Ele realiza tarefas de classificação binária, onde a saída é 0 ou 1. O perceptron aplica uma função de ativação (geralmente uma função degrau) à soma ponderada das entradas para produzir uma saída.
 
-### Vantagens e Desvantagens do Perceptron
-    
-**Vantagens**:
+* **Aplicações:** Classificação de dados linearmente separáveis.
+* **Limitações:** Não consegue resolver problemas que envolvem dados não linearmente separáveis, como o problema do XOR.
 
-* Simplicidade e facilidade de implementação.
-* Eficiência computacional em problemas simples.
-    
-**Desvantagens**:
+## 2. Multilayer Perceptron (MLP)
 
-* Limitado a problemas linearmente separáveis.
-* Sensível a ruído nos dados de entrada.
+O MLP é uma rede neural composta por múltiplas camadas de neurônios, com uma ou mais camadas ocultas entre a camada de entrada e a camada de saída. Essa estrutura permite que o MLP resolva problemas mais complexos que o perceptron simples.
 
-## Multilayer Perceptron (MLP)
+* **Aplicações:** Reconhecimento de padrões, classificação de imagens, regressão.
+* **Vantagens:** Capacidade de resolver problemas não linearmente separáveis.
+* **Desvantagens:** Requer grandes volumes de dados e poder computacional.
 
-O Multilayer Perceptron (MLP) é uma rede neural feedforward composta por múltiplas camadas de neurônios. Ele é capaz de resolver problemas que não são linearmente separáveis, ao contrário do perceptron simples. O MLP é composto por uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída.
+## 3. Redes Neurais Convolucionais (CNNs)
 
-### Funcionamento do MLP
+As CNNs são especializadas em processamento de dados em grade, como imagens. Elas utilizam camadas convolucionais para extrair características locais da imagem e camadas de pooling para reduzir a dimensionalidade. As CNNs são usadas amplamente em tarefas de visão computacional.
 
-1. **Inicialização dos Pesos**: os pesos são inicializados de forma aleatória.
-2. **Forward Propagation**: os dados de entrada são propagados pela rede, passando por cada camada de neurônios.
-3. **Cálculo do Erro**: o erro é calculado a partir da diferença entre a saída da rede e o valor esperado.
-4. **Backward Propagation**: o erro é propagado de volta pela rede, ajustando os pesos para minimizar o erro.
-5. **Atualização dos Pesos**: os pesos são atualizados com base no erro calculado.
-6. **Iteração**: o processo de forward e backward propagation é repetido diversas vezes até que a rede aprenda a realizar a tarefa desejada.
+* **Aplicações:** Classificação de imagens, detecção de objetos, segmentação de imagens.
+* **Vantagens:** Capacidade de extrair características complexas, redução de dimensionalidade, eficiente em imagens.
+* **Desvantagens:** Necessidade de grandes volumes de dados e alta demanda computacional.
 
-### Aplicações do MLP
+### Estrutura de uma CNN:
 
-O MLP pode ser utilizado em diversas aplicações, como:
+* **Camadas Convolucionais:** Extrai características locais da imagem (bordas, texturas, etc.).
+* **Camadas de Pooling:** Reduz a dimensionalidade das características, preservando a informação mais importante.
+* **Camadas Densas:** Realiza a classificação final com base nas características extraídas.
 
-* **Classificação**: o MLP pode ser utilizado para classificar dados em diferentes categorias.
-* **Regressão**: o MLP pode ser utilizado para prever valores contínuos.
-* **Reconhecimento de Padrões**: o MLP pode ser utilizado para reconhecer padrões em dados complexos.
+## 4. Redes Neurais Recorrentes (RNNs)
 
-### Vantagens e Desvantagens do MLP
+As RNNs são adequadas para dados sequenciais. Elas possuem conexões que permitem que informações anteriores influenciem a saída atual, tornando-as ideais para tarefas como séries temporais, processamento de texto e reconhecimento de fala. No entanto, as RNNs sofrem de problemas de vanishing gradient, o que limita sua capacidade de capturar dependências de longo prazo.
 
-**Vantagens**:
-* Capaz de resolver problemas não linearmente separáveis.
-* Flexível e pode ser aplicado em diversas áreas.
+* **Aplicações:** Tradução automática, reconhecimento de fala, análise de séries temporais.
+* **Vantagens:** Capacidade de capturar dependências temporais em dados sequenciais.
+* **Desvantagens:**  Sofrem de problemas de vanishing gradient, dificultando o aprendizado de longas dependências temporais.
 
-**Desvantagens**:
-* Requer um grande volume de dados para treinamento.
-* Pode ser computacionalmente intensivo.
+### Variações de RNNs: ###
 
-## Redes Neurais Convolucionais (CNN)
+* **LSTM (Long Short-Term Memory):** Introduz uma estrutura de "portas" que controla o fluxo de informação, permitindo que a rede capture dependências de longo prazo.
+* **GRU (Gated Recurrent Unit):** Simples como o LSTM, mas com menos parâmetros, também resolve o problema de vanishing gradient.
 
-As Redes Neurais Convolucionais (CNNs) são um tipo especializado de rede neural projetado para processar dados em grade, como imagens. As CNNs são compostas por camadas convolucionais que extraem características das imagens, seguidas por camadas de pooling que reduzem a dimensionalidade dos dados. As CNNs são amplamente utilizadas em tarefas de visão computacional, como classificação de imagens e detecção de objetos.
+## 5. Redes Neurais Generativas Adversariais (GANs)
 
-### Funcionamento das CNNs
+As GANs são compostas por duas redes que competem entre si: um gerador e um discriminador. O gerador tenta criar dados falsos (por exemplo, imagens) que se parecem com dados reais, enquanto o discriminador tenta distinguir entre os dados reais e os gerados. Essa competição melhora continuamente a qualidade dos dados gerados.
 
-1. **Convolução**: a operação de convolução é aplicada à imagem de entrada para extrair características.
-2. **Ativação**: a função de ativação, geralmente ReLU, é aplicada após a convolução.
-3. **Pooling**: a operação de pooling é aplicada para reduzir a dimensionalidade dos dados.
-4. **Flatten**: os dados são achatados em um vetor para serem passados para a camada densa.
-5. **Camada Densa**: uma ou mais camadas densas são utilizadas para realizar a classificação final.
+* **Aplicações:** Geração de imagens realistas, criação de arte, aumento de resolução de imagens.
+* **Vantagens:** Capacidade de gerar dados sintéticos altamente realistas.
+* **Desvantagens:** Difícil de treinar, instabilidade durante o treinamento.
 
-### Aplicações das CNNs
-
-As CNNs são amplamente utilizadas em tarefas de visão computacional, como:
-
-* **Classificação de Imagens**: as CNNs são utilizadas para classificar imagens em diferentes categorias.
-* **Detecção de Objetos**: as CNNs são utilizadas para detectar objetos em imagens.
-* **Segmentação Semântica**: as CNNs são utilizadas para segmentar imagens em regiões semânticas.
-
-### Vantagens e Desvantagens das CNNs
-
-**Vantagens**:
-* Capazes de extrair características complexas de imagens.
-* Eficientes em tarefas de visão computacional.
-* Reduzem a necessidade de pré-processamento manual.
-* Podem ser aplicadas em problemas de classificação e detecção de objetos.
-* Permitem a aprendizagem de características hierárquicas.
-* Reduzem a dimensionalidade dos dados.
-* São robustas a variações de escala e rotação.
-
-**Desvantagens**:
-* Requerem grande quantidade de dados para treinamento.
-* São computacionalmente intensivas.
-* Podem sofrer de overfitting em conjuntos de dados pequenos.
-* Podem ser difíceis de interpretar devido à complexidade das camadas convolucionais.
-* Podem ser sensíveis a variações de iluminação e ruído.
-* Podem ser difíceis de treinar devido à necessidade de ajustar hiperparâmetros.
-
-## Redes Neurais Recorrentes (RNN)
-
-As Redes Neurais Recorrentes (RNNs) são um tipo de rede neural projetada para processar sequências de dados. Diferente das redes neurais tradicionais, as RNNs possuem conexões recorrentes que permitem que informações sejam propagadas ao longo do tempo, tornando-as ideais para tarefas que envolvem dados sequenciais, como séries temporais e processamento de linguagem natural.
-
-### Funcionamento das RNNs
-
-1. **Inicialização dos Pesos**: os pesos são inicializados de forma aleatória.
-2. **Forward Propagation**: os dados de entrada são propagados pela rede, e a saída de cada neurônio é passada para o próximo neurônio na sequência e também de volta para o próprio neurônio.
-3. **Cálculo do Erro**: o erro é calculado a partir da diferença entre a saída da rede e o valor esperado.
-4. **Backward Propagation Through Time (BPTT)**: o erro é propagado de volta pela rede ao longo do tempo, ajustando os pesos para minimizar o erro.
-5. **Atualização dos Pesos**: os pesos são atualizados com base no erro calculado.
-6. **Iteração**: o processo de forward e backward propagation é repetido diversas vezes até que a rede aprenda a realizar a tarefa desejada.
-
-### Aplicações das RNNs
-
-As RNNs são amplamente utilizadas em tarefas que envolvem dados sequenciais, como:
-
-* **Processamento de Linguagem Natural (NLP)**: as RNNs são utilizadas para tarefas como tradução automática, geração de texto e análise de sentimentos.
-* **Reconhecimento de Fala**: as RNNs são utilizadas para transcrever áudio em texto.
-* **Previsão de Séries Temporais**: as RNNs são utilizadas para prever valores futuros com base em dados históricos.
-* **Modelagem de Sequências**: as RNNs são utilizadas para modelar e gerar sequências de dados, como música e DNA.
-
-### Vantagens e Desvantagens das RNNs
-
-**Vantagens**:
-* Capazes de processar dados sequenciais e capturar dependências temporais.
-* Eficientes em tarefas que envolvem séries temporais e sequências de dados.
-* Flexíveis e podem ser aplicadas em diversas áreas.
-
-**Desvantagens**:
-* Podem sofrer de problemas de vanishing gradient e exploding gradient.
-* Requerem técnicas avançadas de treinamento, como BPTT.
-* Podem ser computacionalmente intensivas.
-* Podem ser difíceis de treinar devido à necessidade de ajustar hiperparâmetros.
-
-### Tipos de RNNs
-
-Existem variações das RNNs que abordam algumas de suas limitações, como:
-
-* **Long Short-Term Memory (LSTM)**: uma variação das RNNs que utiliza células de memória para capturar dependências de longo prazo.
-* **Gated Recurrent Unit (GRU)**: uma variação das RNNs que simplifica a arquitetura das LSTMs, mantendo a capacidade de capturar dependências de longo prazo.
-
-As RNNs e suas variações são ferramentas poderosas para tarefas que envolvem dados sequenciais e continuam a ser uma área ativa de pesquisa e desenvolvimento.
-
-## Redes Neurais Generativas Adversariais (GANs)
-
-As Redes Neurais Generativas Adversariais (GANs) são um tipo de rede neural composta por duas redes neurais que competem entre si: o gerador e o discriminador. O gerador cria dados falsos que se parecem com dados reais, enquanto o discriminador tenta distinguir entre dados reais e falsos. Esse processo adversarial permite que as GANs gerem dados realistas.
-
-### Funcionamento das GANs
-
-1. **Gerador**: o gerador cria dados falsos a partir de um vetor de ruído.
-2. **Discriminador**: o discriminador avalia os dados e tenta distinguir entre dados reais e falsos.
-3. **Treinamento Adversarial**: o gerador e o discriminador são treinados simultaneamente. O gerador tenta enganar o discriminador, enquanto o discriminador tenta melhorar sua capacidade de distinguir entre dados reais e falsos.
-4. **Atualização dos Pesos**: os pesos do gerador e do discriminador são atualizados com base no erro calculado.
-5. **Iteração**: o processo é repetido até que o gerador produza dados suficientemente realistas.
-
-### Aplicações das GANs
-
-As GANs são amplamente utilizadas em diversas aplicações, como:
-
-* **Geração de Imagens**: as GANs são utilizadas para criar imagens realistas a partir de vetores de ruído.
-* **Aprimoramento de Imagens**: as GANs são utilizadas para melhorar a qualidade de imagens, como aumento de resolução e remoção de ruído.
-* **Criação de Arte**: as GANs são utilizadas para gerar obras de arte originais.
-* **Geração de Dados Sintéticos**: as GANs são utilizadas para criar dados sintéticos para treinamento de modelos de machine learning.
-
-### Vantagens e Desvantagens das GANs
-
-**Vantagens**:
-* Capazes de gerar dados realistas.
-* Úteis em diversas aplicações criativas e práticas.
-* Podem ser utilizadas para aprimorar a qualidade de dados existentes.
-
-**Desvantagens**:
-* Difíceis de treinar devido à natureza adversarial.
-* Podem sofrer de instabilidade durante o treinamento.
-* Requerem grande quantidade de dados para treinamento.
-
-As GANs são uma ferramenta poderosa para a geração de dados e continuam a ser uma área ativa de pesquisa e desenvolvimento.
 
 ## Fontes e Referências
 
