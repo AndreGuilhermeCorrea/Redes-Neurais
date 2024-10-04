@@ -1,11 +1,17 @@
 
-# Virtual Environment
 venv/
-
-# VS Code
-vscode/
-
+.env
+*.swp
+package-lock.json
+__pycache__
+.pytest_cache
+.venv
+*.egg-info
 env/
+.vscode
 
-#python
-__pycache__/
+tests
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
