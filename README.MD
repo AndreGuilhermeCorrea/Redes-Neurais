@@ -1,20 +1,64 @@
 # Redes Neurais
 
-As redes neurais são um modelo computacional inspirado no sistema nervoso biológico. Elas são compostas por neurônios artificiais que são organizados em camadas e conectados por sinapses(conexões entre neurônios). Esses neurônios realizam cálculos matemáticos para identificar padrões e fazer previsões com base em dados de entrada, ou seja, cada neurônio recebe um conjunto de entradas, realiza um cálculo e produz uma saída. A saída de um neurônio é a entrada de outro neurônio. A rede neural é treinada para aprender padrões e realizar tarefas específicas.
+As redes neurais são modelos computacionais inspirados no funcionamento do sistema nervoso biológico. Elas são compostas por neurônios artificiais organizados em camadas, conectados por sinapses (as conexões entre os neurônios). Esses neurônios realizam cálculos matemáticos para identificar padrões e fazer previsões com base em dados de entrada. Cada neurônio recebe um conjunto de entradas, realiza um cálculo e gera uma saída, que serve como entrada para outros neurônios. A rede é treinada para aprender padrões e executar tarefas específicas de maneira eficiente.
 
-## Aplicações das Redes Neurais
+Com o avanço das tecnologias de computação em nuvem, redes neurais podem ser implementadas de forma escalável e altamente eficiente. Neste projeto, além de servir como base para o estudo das redes neurais, será abordado o uso da AWS para hospedar e gerenciar uma aplicação de reconhecimento de imagens.
+
+## Objetivos do Projeto
+
+O principal objetivo deste projeto é explorar o treinamento e a implementação de redes neurais com suporte da infraestrutura AWS. Além disso, será desenvolvido um frontend simples utilizando HTML e JavaScript para facilitar a inserção de imagens a serem reconhecidas pela inteligência artificial. Esse frontend será integrado à aplicação FastAPI, que será responsável por processar as imagens e realizar o reconhecimento via IA.
+
+### Arquitetura da Solução
+
+* **Treinamento de Redes Neurais**
+    - O treinamento das redes neurais será realizado localmente, com os dados resultantes sendo armazenados em um bucket S3 da AWS.
+* **Serviço de Reconhecimento de Imagem**
+    - O modelo treinado será implantado em um endpoint utilizando o Amazon SageMaker.
+    - As imagens para reconhecimento serão enviadas ao endpoint via API, que retornará as previsões.
+* **Armazenamento de Dados**
+    - Inicialmente, os dados serão armazenados localmente em um banco de dados PostgreSQL.
+    - Futuramente, planeja-se migrar os dados para o DynamoDB, aproveitando a escalabilidade e a alta disponibilidade da AWS.
+* **Infraestrutura como Código**
+    - A infraestrutura será provisionada utilizando o AWS CDK (Cloud Development Kit) e o CloudFormation, garantindo a automação e reprodutibilidade da infraestrutura necessária.
+* **Testes de API com Postman**
+    Para garantir o funcionamento correto das rotas de API, será utilizado o Postman para realizar testes, como:
+    - Envio de imagens para o endpoint de reconhecimento.
+    - Verificação das respostas do modelo de rede neural.
+    - Testes de integração com o banco de dados para garantir o correto armazenamento dos resultados.
+
+### Passos Futuros
+
+* **Migração para DynamoDB**
+    - Planejar e executar a migração dos dados do PostgreSQL para o DynamoDB, ajustando a aplicação para utilizar DynamoDB como banco de dados principal.
+* **Automatização da Infraestrutura**
+    - Utilizar o AWS CDK para automatizar a criação e configuração de todos os recursos AWS necessários, além de gerenciar e versionar a infraestrutura com CloudFormation.
+* **Monitoramento e Escalabilidade**
+    - Implementar monitoramento da aplicação utilizando o Amazon CloudWatch para acompanhar seu desempenho.
+    - Configurar políticas de auto-scaling para garantir que a aplicação se adapte automaticamente ao aumento de carga.
+
+## Um Estudo Sobre as Redes Neurais
 
 As redes neurais têm aplicações em diversas áreas, pois são capazes de aprender padrões a partir de grandes volumes de dados.
 
-* **Visão Computacional:** Utilizando Redes Neurais Convolucionais (CNNs), as redes neurais são usadas para reconhecimento de imagens, classificação de objetos, detecção de rostos e diagnóstico médico com base em imagens radiológicas. **Como:** Classificação de imagens de gatos e cães, detecção de tumores em imagens de ressonância magnética.
+* **Visão Computacional:** 
+    - Utilizando Redes Neurais Convolucionais (CNNs), as redes neurais são usadas para reconhecimento de imagens, classificação de objetos, detecção de rostos e diagnóstico médico com base em imagens radiológicas. 
+        - **Como:** Classificação de imagens de gatos e cães, detecção de tumores em imagens de ressonância magnética.
 
-* **Processamento de Linguagem Natural (NLP):** Redes como as Redes Neurais Recorrentes (RNNs) e Transformers são usadas para tradução automática, geração de texto, chatbots, análise de sentimentos e muito mais. **Como:** Google Translate, assistentes virtuais como Alexa e Siri, análise de sentimentos de comentários em redes sociais.
+* **Processamento de Linguagem Natural (NLP):** 
+    - Redes como as Redes Neurais Recorrentes (RNNs) e Transformers são usadas para tradução automática, geração de texto, chatbots, análise de sentimentos e muito mais.
+        - **Como:** Google Translate, assistentes virtuais como Alexa e Siri, análise de sentimentos de comentários em redes sociais.
 
-* **Sistemas de Recomendação:** Redes neurais são usadas para prever preferências dos usuários, recomendando filmes, músicas, produtos, ou notícias com base no comportamento anterior do usuário. **Como:**  Sistemas de recomendação da Netflix, Amazon e YouTube.
+* **Sistemas de Recomendação:** 
+    - Redes neurais são usadas para prever preferências dos usuários, recomendando filmes, músicas, produtos, ou notícias com base no comportamento anterior do usuário. 
+        - **Como:**  Sistemas de recomendação da Netflix, Amazon e YouTube.
 
-* **Medicina:** Redes neurais são aplicadas em diagnóstico médico, descoberta de medicamentos e análise preditiva de doenças. **Como:** Diagnóstico de câncer, identificação de doenças raras, previsão de evolução de doenças com base em histórico médico.
+* **Medicina:** 
+    - Redes neurais são aplicadas em diagnóstico médico, descoberta de medicamentos e análise preditiva de doenças. 
+        - **Como:** Diagnóstico de câncer, identificação de doenças raras, previsão de evolução de doenças com base em histórico médico.
 
-* **Jogos e Inteligência Artificial:** Redes neurais são usadas para criar agentes que jogam jogos complexos, como o Go e o xadrez, vencendo até mesmo jogadores humanos profissionais. **Como:** AlphaGo, da DeepMind, e agentes de IA que jogam StarCraft.
+* **Jogos e Inteligência Artificial:** 
+    - Redes neurais são usadas para criar agentes que jogam jogos complexos, como o Go e o xadrez, vencendo até mesmo jogadores humanos profissionais.
+        - **Como:** AlphaGo, da DeepMind, e agentes de IA que jogam StarCraft.
 
 ## Fluxo das Redes Neurais
 
@@ -146,3 +190,11 @@ As GANs são compostas por duas redes que competem entre si: um gerador e um dis
 18. [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738)
 19. [Introduction to the Theory of Neural Computation](https://www.amazon.com/Introduction-Theory-Neural-Computation-Volume/dp/0201515601)
 20. [Neural Networks for Pattern Recognition](https://www.amazon.com/Neural-Networks-Pattern-Recognition-Christopher/dp/0198538642)
+
+### Referências Adicionais
+
+1. [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
+2. [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
+3. [Amazon DynamoDB Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+4. [Postman Documentation](https://learning.postman.com/docs/getting-started/introduction/)
+5. [CloudFormation Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
