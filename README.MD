@@ -36,6 +36,20 @@ O principal objetivo deste projeto é explorar o treinamento e a implementação
     - Implementar monitoramento da aplicação utilizando o Amazon CloudWatch para acompanhar seu desempenho.
     - Configurar políticas de auto-scaling para garantir que a aplicação se adapte automaticamente ao aumento de carga.
 
+    ## Tecnologias Utilizadas no Projeto
+
+    * **Python:** Linguagem de programação principal para desenvolvimento da aplicação. [Documentação](https://docs.python.org/3/)
+    * **FastAPI:** Framework para construção de APIs rápidas e eficientes. [Documentação](https://fastapi.tiangolo.com/)
+    * **PostgreSQL:** Banco de dados relacional utilizado inicialmente para armazenamento de dados. [Documentação](https://www.postgresql.org/docs/)
+    * **AWS S3:** Serviço de armazenamento de objetos utilizado para armazenar os dados de treinamento. [Documentação](https://docs.aws.amazon.com/s3/index.html)
+    * **Amazon SageMaker:** Serviço utilizado para implantar o modelo treinado em um endpoint. [Documentação](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
+    * **HTML e JavaScript:** Tecnologias utilizadas para desenvolver o frontend da aplicação. [HTML Documentação](https://developer.mozilla.org/docs/Web/HTML) | [JavaScript Documentação](https://developer.mozilla.org/docs/Web/JavaScript)
+    * **Postman:** Ferramenta utilizada para testar as rotas da API. [Documentação](https://learning.postman.com/docs/getting-started/introduction/)
+    * **AWS DynamoDB:** Banco de dados NoSQL planejado para substituir o PostgreSQL, aproveitando a escalabilidade e alta disponibilidade. [Documentação](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)
+    * **AWS CDK (Cloud Development Kit):** Ferramenta para provisionamento de infraestrutura como código. [Documentação](https://docs.aws.amazon.com/cdk/latest/guide/home.html)
+    * **AWS CloudFormation:** Serviço para gerenciar e versionar a infraestrutura. [Documentação](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
+    * **Amazon CloudWatch:** Serviço para monitoramento e acompanhamento do desempenho da aplicação. [Documentação](https://docs.aws.amazon.com/cloudwatch/)
+
 ## Um Estudo Sobre as Redes Neurais
 
 As redes neurais têm aplicações em diversas áreas, pois são capazes de aprender padrões a partir de grandes volumes de dados.
