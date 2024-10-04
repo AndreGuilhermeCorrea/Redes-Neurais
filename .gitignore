@@ -3,4 +3,9 @@
 venv/
 
 # VS Code
-.vscode/
+vscode/
+
+env/
+
+#python
+__pycache__/
