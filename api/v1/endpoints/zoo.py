@@ -1,9 +1,13 @@
+# api/v1/endpoints/zoo.py
+
 from typing import List
 from fastapi import APIRouter, status, Depends, HTTPException, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 from core.deps import get_session
 from sqlmodel import select
 from models.zoo_model import Zoo
+from fastapi import UploadFile, File
+import os
 
 router = APIRouter()
 
@@ -74,3 +78,33 @@ async def delete_animal(animal_id: int, db: AsyncSession = Depends(get_session))
     await db.delete(animal)
     await db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+# POST /upload-imagem/
+# Rota para receber uma imagem e salvar no localstorage/img_up
+@router.post("/upload-imagem", status_code=status.HTTP_201_CREATED)
+async def upload_imagem(imagem: UploadFile = File(...)):
+    print("passou aqui")
+     # Tratamento de erros
+    try:
+        # Verifica se o arquivo é uma imagem valida
+        if not imagem.content_type.startswith("image/"):
+            raise HTTPException(status_code=400, detail="Apenas arquivos de imagem são permitidos.")
+        
+
+        # Define o caminho para salvar a imagem
+        caminho_imagem = os.path.join("local_storage", "img_up", imagem.filename)
+        
+        # Cria os diretórios se não existirem
+        os.makedirs(os.path.dirname(caminho_imagem), exist_ok=True)
+        
+        # Salva a imagem no caminho especificado
+        with open(caminho_imagem, "wb") as buffer:
+            buffer.write(await imagem.read())
+        
+        print(f"Imagem salva em {caminho_imagem}")
+        return {"filename": imagem.filename, "path": caminho_imagem}
+    
+    except Exception as e:
+        print("Caiu no except")
+        print(f"Erro: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Ocorreu um erro ao processar o arquivo: {str(e)}")
