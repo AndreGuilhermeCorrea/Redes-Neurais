@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooWildVision</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body> 
+    <header>
+        <div class="header-left">
+            <img src="/static/img/logo.png" alt="ZooWildVision">
+            <h2>Reconhecimento de imagens com inteligencia artificial e redes neurais...</h2>
+            <h1>ZooWildVision.com</h1>
+        </div>
+        <div>
+            <button onclick="toggleDropdown()">Sites Relacionados</button>
+            <div id="dropdown">
+                <a href="https://www.nationalgeographic.com/animals/">National Geographic</a>
+                <a href="https://www.worldwildlife.org/">World Wildlife Fund</a>
+                <a href="https://www.animalplanet.com/">Animal Planet</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulário para Upload da Imagem -->
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Selecione uma imagem de um animal:</label>
+        <input type="file" id="image" name="file" accept="image/*" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <!-- Área onde os resultados da previsão serão exibidos -->
+    <div id="result"></div>
+
+    <footer>
+        <p>&copy;<a href="mailto:de_correa@msn.com"> 2024 ZooWildVision</a></p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
